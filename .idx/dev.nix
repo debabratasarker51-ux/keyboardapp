@@ -20,6 +20,9 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = { };
       # To run something each time the workspace is (re)started, use the `onStart` hook
+      onStart = {
+        web-preview = "flutter run -d chrome --web-port 8080";
+       };
     };
     # Enable previews and customize configuration
     previews = {
